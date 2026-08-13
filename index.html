@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
 
 <meta name="viewport"
@@ -13,11 +12,9 @@ content="CodeNova - Learn HTML, coding and web development step by step.">
 <meta name="keywords"
 content="CodeNova, HTML, CSS, JavaScript, Python, coding, programming">
 
-<meta name="author"
-content="CodeNova">
+<meta name="author" content="CodeNova">
 
-<meta name="theme-color"
-content="#0f172a">
+<meta name="theme-color" content="#020617">
 
 <title>CodeNova | Learn Coding</title>
 
@@ -45,8 +42,12 @@ body{
     overflow-x:hidden;
 }
 
+button{
+    font-family:inherit;
+}
+
 /* =========================
-   ANIMATED BACKGROUND
+   BACKGROUND
 ========================= */
 
 #particles{
@@ -72,24 +73,17 @@ body{
         transform:translateY(110vh);
         opacity:0;
     }
-
     20%{
         opacity:.6;
     }
-
     80%{
         opacity:.6;
     }
-
     to{
         transform:translateY(-10vh);
         opacity:0;
     }
 }
-
-/* =========================
-   MOUSE GLOW
-========================= */
 
 #mouseGlow{
     position:fixed;
@@ -117,7 +111,7 @@ body{
 }
 
 /* =========================
-   PAGE ANIMATION
+   PAGES
 ========================= */
 
 .page{
@@ -126,25 +120,22 @@ body{
 
 .page.active{
     display:block;
-    animation:pageEnter .5s ease;
+    animation:pageEnter .45s ease;
 }
 
 @keyframes pageEnter{
-
     from{
         opacity:0;
-        transform:translateY(18px);
+        transform:translateY(15px);
     }
-
     to{
         opacity:1;
         transform:translateY(0);
     }
-
 }
 
 /* =========================
-   TEXT ANIMATIONS
+   TEXT
 ========================= */
 
 .logo{
@@ -155,37 +146,31 @@ body{
 }
 
 @keyframes textGlow{
-
     from{
         text-shadow:0 0 5px rgba(96,165,250,.2);
     }
-
     to{
         text-shadow:
         0 0 8px rgba(96,165,250,.5),
         0 0 18px rgba(124,58,237,.3);
     }
-
 }
 
 .subtitle{
     color:#94a3b8;
     margin-bottom:25px;
-    animation:fadeText .8s ease;
+    animation:fadeText .7s ease;
 }
 
 @keyframes fadeText{
-
     from{
         opacity:0;
         transform:translateX(-10px);
     }
-
     to{
         opacity:1;
         transform:translateX(0);
     }
-
 }
 
 .section-title{
@@ -198,13 +183,11 @@ body{
 ========================= */
 
 .welcome{
-    background:
-    linear-gradient(
+    background:linear-gradient(
         135deg,
         #2563eb,
         #7c3aed
     );
-
     padding:25px;
     border-radius:22px;
     margin-bottom:25px;
@@ -214,22 +197,19 @@ body{
 }
 
 @keyframes welcomeFloat{
-
     0%,100%{
         transform:translateY(0);
     }
-
     50%{
         transform:translateY(-4px);
     }
-
 }
 
 .welcome:after{
     content:"";
     position:absolute;
-    width:100px;
-    height:100px;
+    width:110px;
+    height:110px;
     border-radius:50%;
     background:rgba(255,255,255,.08);
     right:-30px;
@@ -247,7 +227,7 @@ body{
 }
 
 /* =========================
-   LIVE STATUS
+   LIVE
 ========================= */
 
 .live-status{
@@ -270,19 +250,15 @@ body{
 }
 
 @keyframes livePulse{
-
     0%{
         box-shadow:0 0 0 0 rgba(34,197,94,.7);
     }
-
     70%{
         box-shadow:0 0 0 8px rgba(34,197,94,0);
     }
-
     100%{
         box-shadow:0 0 0 0 rgba(34,197,94,0);
     }
-
 }
 
 /* =========================
@@ -305,7 +281,7 @@ body{
 }
 
 .course:hover{
-    transform:translateY(-6px) scale(1.02);
+    transform:translateY(-5px) scale(1.02);
     border-color:#60a5fa;
     box-shadow:0 10px 25px rgba(37,99,235,.15);
 }
@@ -351,44 +327,13 @@ body{
 .progress-fill{
     width:0%;
     height:100%;
-    background:
-    linear-gradient(
+    background:linear-gradient(
         90deg,
         #2563eb,
         #7c3aed
     );
     border-radius:10px;
     transition:1s ease;
-}
-
-/* =========================
-   STATS
-========================= */
-
-.stats{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:10px;
-    margin-top:20px;
-}
-
-.stat{
-    background:#0f172a;
-    padding:15px 5px;
-    border-radius:14px;
-    text-align:center;
-    border:1px solid #1e293b;
-}
-
-.stat strong{
-    display:block;
-    font-size:20px;
-    color:#60a5fa;
-}
-
-.stat span{
-    color:#94a3b8;
-    font-size:11px;
 }
 
 /* =========================
@@ -459,7 +404,7 @@ body{
 }
 
 /* =========================
-   LESSON
+   LESSONS
 ========================= */
 
 .lesson-item{
@@ -516,7 +461,7 @@ body{
 }
 
 /* =========================
-   CODE BOX
+   CODE
 ========================= */
 
 .code-box{
@@ -652,8 +597,7 @@ body{
     height:80px;
     margin:auto;
     border-radius:50%;
-    background:
-    linear-gradient(
+    background:linear-gradient(
         135deg,
         #2563eb,
         #7c3aed
@@ -667,15 +611,38 @@ body{
 }
 
 @keyframes avatarPulse{
-
     0%,100%{
         box-shadow:0 0 0 0 rgba(96,165,250,.3);
     }
-
     50%{
         box-shadow:0 0 0 10px rgba(96,165,250,0);
     }
+}
 
+.stats{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:10px;
+    margin-top:20px;
+}
+
+.stat{
+    background:#0f172a;
+    padding:15px 5px;
+    border-radius:14px;
+    text-align:center;
+    border:1px solid #1e293b;
+}
+
+.stat strong{
+    display:block;
+    font-size:20px;
+    color:#60a5fa;
+}
+
+.stat span{
+    color:#94a3b8;
+    font-size:11px;
 }
 
 .badge-card{
@@ -691,7 +658,7 @@ body{
 }
 
 /* =========================
-   VISITOR CARD
+   VISITOR
 ========================= */
 
 .visitor-card{
@@ -718,8 +685,7 @@ body{
     display:none;
     margin-top:20px;
     padding:25px;
-    background:
-    linear-gradient(
+    background:linear-gradient(
         135deg,
         #172554,
         #312e81
@@ -803,7 +769,7 @@ body{
 }
 
 /* =========================
-   PRINT CERTIFICATE
+   PRINT
 ========================= */
 
 @media print{
@@ -835,7 +801,6 @@ body{
 }
 
 </style>
-
 </head>
 
 <body>
@@ -845,9 +810,7 @@ body{
 
 <div class="app">
 
-<!-- =========================
-     HOME
-========================= -->
+<!-- HOME -->
 
 <section id="home" class="page active">
 
@@ -926,9 +889,7 @@ onclick="openHtmlCourse()">
 <h2>📊 Your Progress</h2>
 
 <p style="color:#94a3b8;margin-top:8px">
-
 Complete HTML lessons to increase your progress.
-
 </p>
 
 <div class="progress-bar">
@@ -941,9 +902,7 @@ class="progress-fill">
 
 <p id="homeProgressText"
 style="color:#60a5fa;margin-top:8px">
-
 0% completed
-
 </p>
 
 </div>
@@ -962,9 +921,7 @@ class="visitor-number">
 </section>
 
 
-<!-- =========================
-     COURSES
-========================= -->
+<!-- COURSES -->
 
 <section id="coursesPage" class="page">
 
@@ -1038,9 +995,7 @@ Coming Soon
 </section>
 
 
-<!-- =========================
-     HTML COURSE
-========================= -->
+<!-- HTML COURSE -->
 
 <section id="htmlCourse" class="page">
 
@@ -1065,16 +1020,13 @@ onclick="openLesson(1)">
 
 <h3>📖 Lesson 1 — What is HTML?</h3>
 
-<p>
-Learn the basics of HTML.
-</p>
+<p>Learn the basics of HTML.</p>
 
 <div class="lesson-status">
 ✅ Completed
 </div>
 
 </div>
-
 
 <div id="lesson2Item"
 class="lesson-item"
@@ -1082,16 +1034,13 @@ onclick="openLesson(2)">
 
 <h3>🏷️ Lesson 2 — HTML Tags</h3>
 
-<p>
-Understand HTML tags and elements.
-</p>
+<p>Understand HTML tags and elements.</p>
 
 <div class="lesson-status">
 ✅ Completed
 </div>
 
 </div>
-
 
 <div id="lesson3Item"
 class="lesson-item"
@@ -1099,9 +1048,7 @@ onclick="openLesson(3)">
 
 <h3>📝 Lesson 3 — Headings & Paragraphs</h3>
 
-<p>
-Learn headings and text paragraphs.
-</p>
+<p>Learn headings and text paragraphs.</p>
 
 <div class="lesson-status">
 ✅ Completed
@@ -1109,16 +1056,13 @@ Learn headings and text paragraphs.
 
 </div>
 
-
 <div id="lesson4Item"
 class="lesson-item"
 onclick="openLesson(4)">
 
 <h3>🔗 Lesson 4 — Links & Images</h3>
 
-<p>
-Learn links and images.
-</p>
+<p>Learn links and images.</p>
 
 <div class="lesson-status">
 ✅ Completed
@@ -1180,9 +1124,7 @@ onclick="printCertificate()">
 </section>
 
 
-<!-- =========================
-     LESSON PAGE
-========================= -->
+<!-- LESSON -->
 
 <section id="lessonPage" class="page">
 
@@ -1212,9 +1154,7 @@ onclick="completeLesson()">
 </section>
 
 
-<!-- =========================
-     QUIZ
-========================= -->
+<!-- QUIZ -->
 
 <section id="quiz" class="page">
 
@@ -1234,9 +1174,7 @@ HTML Challenge
 
 <span id="quizCounter"
 class="quiz-counter">
-
 Question 1 / 10
-
 </span>
 
 </div>
@@ -1264,15 +1202,11 @@ Next Question →
 class="quiz-score"
 style="display:none">
 
-<h2>
-🎉 Quiz Complete!
-</h2>
+<h2>🎉 Quiz Complete!</h2>
 
 <div id="bigScore"
 class="big-score">
-
 0 / 10
-
 </div>
 
 <p id="percentageText">
@@ -1297,9 +1231,7 @@ onclick="startQuiz()">
 </section>
 
 
-<!-- =========================
-     PROFILE
-========================= -->
+<!-- PROFILE -->
 
 <section id="profile" class="page">
 
@@ -1320,9 +1252,7 @@ CodeNova Student
 </h2>
 
 <p style="color:#94a3b8;margin-top:7px">
-
 Future Developer 🚀
-
 </p>
 
 <div class="stats">
@@ -1333,12 +1263,9 @@ Future Developer 🚀
 0
 </strong>
 
-<span>
-Lessons
-</span>
+<span>Lessons</span>
 
 </div>
-
 
 <div class="stat">
 
@@ -1346,12 +1273,9 @@ Lessons
 0%
 </strong>
 
-<span>
-Progress
-</span>
+<span>Progress</span>
 
 </div>
-
 
 <div class="stat">
 
@@ -1359,14 +1283,11 @@ Progress
 0
 </strong>
 
-<span>
-Badges
-</span>
+<span>Badges</span>
 
 </div>
 
 </div>
-
 
 <div class="badge-card">
 
@@ -1374,9 +1295,7 @@ Badges
 🏆
 </div>
 
-<h3>
-Badges
-</h3>
+<h3>Badges</h3>
 
 <p id="badgeText"
 style="color:#94a3b8;margin-top:7px">
@@ -1387,12 +1306,9 @@ Complete lessons and quizzes to unlock badges.
 
 </div>
 
-
 <div class="progress-card">
 
-<h3>
-🧠 Best Quiz Score
-</h3>
+<h3>🧠 Best Quiz Score</h3>
 
 <p id="bestScore"
 style="color:#60a5fa;font-size:25px;margin-top:10px">
@@ -1403,12 +1319,9 @@ style="color:#60a5fa;font-size:25px;margin-top:10px">
 
 </div>
 
-
 <div class="visitor-card">
 
-<div>
-👁️ Website Visits
-</div>
+<div>👁️ Website Visits</div>
 
 <div id="profileVisitorCount"
 class="visitor-number">
@@ -1424,9 +1337,7 @@ class="visitor-number">
 </div>
 
 
-<!-- =========================
-     BOTTOM NAV
-========================= -->
+<!-- NAV -->
 
 <nav class="bottom-nav">
 
@@ -1438,7 +1349,6 @@ Home
 
 </button>
 
-
 <button class="nav-btn"
 onclick="showPage('coursesPage',this)">
 
@@ -1447,7 +1357,6 @@ Courses
 
 </button>
 
-
 <button class="nav-btn"
 onclick="showPage('quiz',this)">
 
@@ -1455,7 +1364,6 @@ onclick="showPage('quiz',this)">
 Quiz
 
 </button>
-
 
 <button class="nav-btn"
 onclick="showPage('profile',this)">
@@ -1476,18 +1384,20 @@ Profile
 
 let completedLessons =
 Number(
-localStorage.getItem("codeNovaCompletedLessons")
+localStorage.getItem(
+"codeNovaCompletedLessons"
+)
 ) || 0;
 
 let bestQuizScore =
 Number(
-localStorage.getItem("codeNovaBestQuizScore")
+localStorage.getItem(
+"codeNovaBestQuizScore"
+)
 ) || 0;
 
 let currentLesson = 1;
-
 let currentQuestion = 0;
-
 let currentScore = 0;
 
 
@@ -1497,7 +1407,9 @@ let currentScore = 0;
 
 let visits =
 Number(
-localStorage.getItem("codeNovaVisits")
+localStorage.getItem(
+"codeNovaVisits"
+)
 ) || 0;
 
 visits++;
@@ -1521,7 +1433,9 @@ document.getElementById(
 ========================= */
 
 const particleContainer =
-document.getElementById("particles");
+document.getElementById(
+"particles"
+);
 
 for(let i=0;i<35;i++){
 
@@ -1554,7 +1468,9 @@ particle
 ========================= */
 
 const glow =
-document.getElementById("mouseGlow");
+document.getElementById(
+"mouseGlow"
+);
 
 document.addEventListener(
 "mousemove",
@@ -1591,9 +1507,11 @@ of web pages.
 </p>
 
 <div class="code-box">
+
 <code>
 &lt;h1&gt;Hello World&lt;/h1&gt;
 </code>
+
 </div>
 
 <p>
@@ -1605,7 +1523,7 @@ on a web page.
 },
 
 2:{
-title:"🏷️ Lesson 2 — HTML Tags?",
+title:"🏷️ Lesson 2 — HTML Tags",
 content:`
 
 <p>
@@ -1618,9 +1536,7 @@ what each element means.
 <code>
 
 &lt;h1&gt;Heading&lt;/h1&gt;<br>
-
 &lt;p&gt;Paragraph&lt;/p&gt;<br>
-
 &lt;button&gt;Button&lt;/button&gt;
 
 </code>
@@ -1647,7 +1563,6 @@ Headings are created using h1 to h6.
 <code>
 
 &lt;h1&gt;My Website&lt;/h1&gt;<br>
-
 &lt;h2&gt;About Me&lt;/h2&gt;
 
 </code>
@@ -1661,9 +1576,7 @@ Paragraphs use the p tag.
 <div class="code-box">
 
 <code>
-&lt;p&gt;
-Welcome to my website.
-&lt;/p&gt;
+&lt;p&gt;Welcome to my website.&lt;/p&gt;
 </code>
 
 </div>
@@ -1684,9 +1597,7 @@ The a tag creates links.
 <code>
 
 &lt;a href="https://example.com"&gt;<br>
-
 Visit Website<br>
-
 &lt;/a&gt;
 
 </code>
@@ -1715,7 +1626,7 @@ alt="My Image"&gt;
 
 
 /* =========================
-   QUIZ
+   QUIZ QUESTIONS
 ========================= */
 
 const quizQuestions=[
@@ -1842,9 +1753,7 @@ function showPage(pageId,button){
 document.querySelectorAll(
 ".page"
 ).forEach(page=>{
-
 page.classList.remove("active");
-
 });
 
 const page =
@@ -1857,15 +1766,11 @@ page.classList.add("active");
 document.querySelectorAll(
 ".nav-btn"
 ).forEach(btn=>{
-
 btn.classList.remove("active");
-
 });
 
 if(button){
-
 button.classList.add("active");
-
 }
 
 window.scrollTo({
@@ -1874,15 +1779,11 @@ behavior:"smooth"
 });
 
 if(pageId==="profile"){
-
 updateProfile();
-
 }
 
 if(pageId==="quiz"){
-
 startQuiz();
-
 }
 
 }
@@ -1985,9 +1886,7 @@ item.classList.add(
 completedLessons++;
 
 if(completedLessons>4){
-
 completedLessons=4;
-
 }
 
 localStorage.setItem(
@@ -2036,17 +1935,13 @@ document.getElementById(
 );
 
 if(htmlProgress){
-
 htmlProgress.style.width =
 percentage+"%";
-
 }
 
 if(homeProgress){
-
 homeProgress.style.width =
 percentage+"%";
-
 }
 
 const htmlText =
@@ -2060,19 +1955,15 @@ document.getElementById(
 );
 
 if(htmlText){
-
 htmlText.textContent =
 completedLessons+
 " / 4 lessons completed";
-
 }
 
 if(homeText){
-
 homeText.textContent =
 percentage+
 "% completed";
-
 }
 
 updateProfile();
@@ -2081,16 +1972,12 @@ updateProfile();
 
 
 /* =========================
-   LOAD SAVED PROGRESS
+   LOAD PROGRESS
 ========================= */
 
 function loadSavedProgress(){
 
-for(
-let i=1;
-i<=4;
-i++
-){
+for(let i=1;i<=4;i++){
 
 const item =
 document.getElementById(
@@ -2124,7 +2011,6 @@ checkCertificate();
 function startQuiz(){
 
 currentQuestion=0;
-
 currentScore=0;
 
 document.getElementById(
@@ -2239,14 +2125,12 @@ document.querySelectorAll(
 
 options.forEach(
 option=>{
-
 option.disabled=true;
-
 }
 );
 
 if(
-selectedIndex===
+selectedIndex ===
 question.answer
 ){
 
@@ -2287,7 +2171,7 @@ document.getElementById(
 }
 
 if(
-currentQuestion<
+currentQuestion <
 quizQuestions.length-1
 ){
 
@@ -2333,7 +2217,7 @@ Math.round(
 );
 
 if(
-currentScore>
+currentScore >
 bestQuizScore
 ){
 
@@ -2432,52 +2316,38 @@ document.getElementById(
 );
 
 if(profileLessons){
-
 profileLessons.textContent =
 completedLessons;
-
 }
 
 if(profileProgress){
-
 profileProgress.textContent =
 percentage+"%";
-
 }
 
 if(bestScore){
-
 bestScore.textContent =
 bestQuizScore+
 " / 10";
-
 }
 
 let badges=0;
 
 if(completedLessons>=1){
-
 badges++;
-
 }
 
 if(completedLessons>=4){
-
 badges++;
-
 }
 
 if(bestQuizScore>=7){
-
 badges++;
-
 }
 
 if(profileBadges){
-
 profileBadges.textContent =
 badges;
-
 }
 
 if(badgeText){
