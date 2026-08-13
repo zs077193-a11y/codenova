@@ -7,16 +7,16 @@
 content="width=device-width, initial-scale=1.0">
 
 <meta name="description"
-content="CodeNova - Learn HTML, coding and web development step by step.">
+content="CodeNova - Learn HTML, coding and web development step by step. Created by Zaid Shaikh.">
 
 <meta name="keywords"
-content="CodeNova, HTML, CSS, JavaScript, Python, coding, programming">
+content="CodeNova, Zaid Shaikh, HTML, CSS, JavaScript, Python, coding, programming">
 
-<meta name="author" content="CodeNova">
+<meta name="author" content="Zaid Shaikh">
 
 <meta name="theme-color" content="#020617">
 
-<title>CodeNova | Learn Coding</title>
+<title>CodeNova | Learn Coding | Zaid Shaikh</title>
 
 <style>
 
@@ -73,12 +73,8 @@ button{
         transform:translateY(110vh);
         opacity:0;
     }
-    20%{
-        opacity:.6;
-    }
-    80%{
-        opacity:.6;
-    }
+    20%{opacity:.6;}
+    80%{opacity:.6;}
     to{
         transform:translateY(-10vh);
         opacity:0;
@@ -159,18 +155,6 @@ button{
 .subtitle{
     color:#94a3b8;
     margin-bottom:25px;
-    animation:fadeText .7s ease;
-}
-
-@keyframes fadeText{
-    from{
-        opacity:0;
-        transform:translateX(-10px);
-    }
-    to{
-        opacity:1;
-        transform:translateX(0);
-    }
 }
 
 .section-title{
@@ -225,10 +209,6 @@ button{
     color:#e2e8f0;
     line-height:1.5;
 }
-
-/* =========================
-   LIVE
-========================= */
 
 .live-status{
     display:inline-flex;
@@ -289,11 +269,6 @@ button{
 .course-icon{
     font-size:30px;
     margin-bottom:8px;
-    transition:.3s;
-}
-
-.course:hover .course-icon{
-    transform:scale(1.15) rotate(5deg);
 }
 
 .course p,
@@ -305,15 +280,29 @@ button{
 }
 
 /* =========================
+   CARDS
+========================= */
+
+.progress-card,
+.profile-card,
+.visitor-card,
+.quiz-card,
+.lesson-card,
+.course-item,
+.lesson-item,
+.about-creator{
+    background:#1e293b;
+    border:1px solid #334155;
+}
+
+/* =========================
    PROGRESS
 ========================= */
 
 .progress-card{
-    background:#1e293b;
     padding:20px;
     border-radius:20px;
     margin-top:20px;
-    border:1px solid #334155;
 }
 
 .progress-bar{
@@ -347,20 +336,14 @@ button{
 }
 
 .course-item{
-    background:#1e293b;
     padding:20px;
     border-radius:18px;
-    border:1px solid #334155;
     transition:.3s;
 }
 
 .course-item:hover{
     transform:translateY(-3px);
     border-color:#60a5fa;
-}
-
-.course-item h3{
-    margin-bottom:8px;
 }
 
 /* =========================
@@ -399,19 +382,13 @@ button{
     margin-bottom:18px;
 }
 
-.back-btn:hover{
-    background:#475569;
-}
-
 /* =========================
    LESSONS
 ========================= */
 
 .lesson-item{
-    background:#1e293b;
     padding:18px;
     border-radius:16px;
-    border:1px solid #334155;
     cursor:pointer;
     transition:.25s;
 }
@@ -444,10 +421,8 @@ button{
 }
 
 .lesson-card{
-    background:#1e293b;
     padding:22px;
     border-radius:20px;
-    border:1px solid #334155;
 }
 
 .lesson-card h2{
@@ -484,11 +459,9 @@ button{
 ========================= */
 
 .quiz-card{
-    background:#1e293b;
     padding:22px;
     border-radius:20px;
     margin-top:15px;
-    border:1px solid #334155;
 }
 
 .quiz-top{
@@ -522,12 +495,10 @@ button{
     text-align:left;
     cursor:pointer;
     transition:.2s;
-    font-size:15px;
 }
 
 .option:hover{
     border-color:#60a5fa;
-    transform:translateX(3px);
 }
 
 .option.correct{
@@ -547,7 +518,6 @@ button{
 .quiz-result{
     margin-top:15px;
     font-weight:bold;
-    line-height:1.5;
 }
 
 .next-btn{
@@ -581,15 +551,92 @@ button{
 }
 
 /* =========================
+   CREATOR
+========================= */
+
+.about-creator{
+    padding:24px;
+    border-radius:22px;
+    margin-top:22px;
+    text-align:center;
+}
+
+.creator-avatar{
+    width:85px;
+    height:85px;
+    margin:auto;
+    border-radius:50%;
+    background:linear-gradient(
+        135deg,
+        #2563eb,
+        #7c3aed
+    );
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:38px;
+    margin-bottom:14px;
+    animation:avatarPulse 3s infinite;
+}
+
+@keyframes avatarPulse{
+    0%,100%{
+        box-shadow:0 0 0 0 rgba(96,165,250,.3);
+    }
+    50%{
+        box-shadow:0 0 0 10px rgba(96,165,250,0);
+    }
+}
+
+.creator-name{
+    font-size:25px;
+    font-weight:bold;
+}
+
+.creator-role{
+    color:#60a5fa;
+    margin-top:6px;
+}
+
+.creator-description{
+    color:#94a3b8;
+    line-height:1.6;
+    margin-top:15px;
+}
+
+.creator-info{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+    margin-top:18px;
+}
+
+.info-box{
+    background:#0f172a;
+    padding:14px;
+    border-radius:14px;
+    border:1px solid #334155;
+}
+
+.info-box strong{
+    display:block;
+    color:#60a5fa;
+    margin-bottom:5px;
+}
+
+.info-box span{
+    color:#cbd5e1;
+    font-size:13px;
+}
+
+/* =========================
    PROFILE
 ========================= */
 
 .profile-card{
-    background:#1e293b;
     padding:25px;
     border-radius:22px;
     text-align:center;
-    border:1px solid #334155;
 }
 
 .avatar{
@@ -607,16 +654,6 @@ button{
     justify-content:center;
     font-size:35px;
     margin-bottom:15px;
-    animation:avatarPulse 3s infinite;
-}
-
-@keyframes avatarPulse{
-    0%,100%{
-        box-shadow:0 0 0 0 rgba(96,165,250,.3);
-    }
-    50%{
-        box-shadow:0 0 0 10px rgba(96,165,250,0);
-    }
 }
 
 .stats{
@@ -631,7 +668,6 @@ button{
     padding:15px 5px;
     border-radius:14px;
     text-align:center;
-    border:1px solid #1e293b;
 }
 
 .stat strong{
@@ -663,8 +699,6 @@ button{
 
 .visitor-card{
     margin-top:20px;
-    background:#0f172a;
-    border:1px solid #334155;
     border-radius:18px;
     padding:18px;
     text-align:center;
@@ -712,6 +746,22 @@ button{
 }
 
 /* =========================
+   FOOTER
+========================= */
+
+.site-footer{
+    text-align:center;
+    margin-top:30px;
+    padding:22px 10px;
+    color:#64748b;
+    font-size:12px;
+}
+
+.site-footer strong{
+    color:#60a5fa;
+}
+
+/* =========================
    BOTTOM NAV
 ========================= */
 
@@ -738,7 +788,6 @@ button{
     font-size:12px;
     cursor:pointer;
     padding:8px 14px;
-    transition:.2s;
 }
 
 .nav-btn span{
@@ -810,7 +859,9 @@ button{
 
 <div class="app">
 
-<!-- HOME -->
+<!-- =========================
+     HOME
+========================= -->
 
 <section id="home" class="page active">
 
@@ -848,7 +899,7 @@ onclick="openHtmlCourse()">
 
 <h3>HTML</h3>
 
-<p>Learn web structure</p>
+<p>15 beginner lessons</p>
 
 </div>
 
@@ -893,17 +944,52 @@ Complete HTML lessons to increase your progress.
 </p>
 
 <div class="progress-bar">
-
 <div id="homeProgress"
-class="progress-fill">
-</div>
-
+class="progress-fill"></div>
 </div>
 
 <p id="homeProgressText"
 style="color:#60a5fa;margin-top:8px">
 0% completed
 </p>
+
+</div>
+
+<!-- CREATOR IDENTITY -->
+
+<div class="about-creator">
+
+<div class="creator-avatar">
+👨‍💻
+</div>
+
+<div class="creator-name">
+Zaid Shaikh
+</div>
+
+<div class="creator-role">
+🚀 Creator of CodeNova
+</div>
+
+<p class="creator-description">
+CodeNova is a learning project created by
+<strong>Zaid Shaikh</strong> to help beginners
+learn coding step by step.
+</p>
+
+<div class="creator-info">
+
+<div class="info-box">
+<strong>🎓 Education</strong>
+<span>12th Standard</span>
+</div>
+
+<div class="info-box">
+<strong>💻 Skills</strong>
+<span>HTML • CSS • Python</span>
+</div>
+
+</div>
 
 </div>
 
@@ -921,7 +1007,9 @@ class="visitor-number">
 </section>
 
 
-<!-- COURSES -->
+<!-- =========================
+     COURSES
+========================= -->
 
 <section id="coursesPage" class="page">
 
@@ -995,81 +1083,25 @@ Coming Soon
 </section>
 
 
-<!-- HTML COURSE -->
+<!-- =========================
+     HTML COURSE
+========================= -->
 
 <section id="htmlCourse" class="page">
 
 <button class="btn back-btn"
 onclick="showPage('coursesPage')">
-
 ← Back to Courses
-
 </button>
 
 <h1>🌐 HTML Course</h1>
 
 <p class="subtitle">
-Beginner level • 4 Lessons
+Beginner level • 15 Lessons
 </p>
 
-<div class="lesson-list">
-
-<div id="lesson1Item"
-class="lesson-item"
-onclick="openLesson(1)">
-
-<h3>📖 Lesson 1 — What is HTML?</h3>
-
-<p>Learn the basics of HTML.</p>
-
-<div class="lesson-status">
-✅ Completed
-</div>
-
-</div>
-
-<div id="lesson2Item"
-class="lesson-item"
-onclick="openLesson(2)">
-
-<h3>🏷️ Lesson 2 — HTML Tags</h3>
-
-<p>Understand HTML tags and elements.</p>
-
-<div class="lesson-status">
-✅ Completed
-</div>
-
-</div>
-
-<div id="lesson3Item"
-class="lesson-item"
-onclick="openLesson(3)">
-
-<h3>📝 Lesson 3 — Headings & Paragraphs</h3>
-
-<p>Learn headings and text paragraphs.</p>
-
-<div class="lesson-status">
-✅ Completed
-</div>
-
-</div>
-
-<div id="lesson4Item"
-class="lesson-item"
-onclick="openLesson(4)">
-
-<h3>🔗 Lesson 4 — Links & Images</h3>
-
-<p>Learn links and images.</p>
-
-<div class="lesson-status">
-✅ Completed
-</div>
-
-</div>
-
+<div id="lessonList"
+class="lesson-list">
 </div>
 
 <div class="progress-card">
@@ -1077,18 +1109,13 @@ onclick="openLesson(4)">
 <h3>HTML Progress</h3>
 
 <div class="progress-bar">
-
 <div id="htmlProgress"
-class="progress-fill">
-</div>
-
+class="progress-fill"></div>
 </div>
 
 <p id="htmlProgressText"
 style="color:#60a5fa;margin-top:8px">
-
-0 / 4 lessons completed
-
+0 / 15 lessons completed
 </p>
 
 </div>
@@ -1099,11 +1126,12 @@ class="certificate">
 <h2>🏆 CodeNova Certificate</h2>
 
 <p>
-This certificate is awarded for successfully completing the CodeNova HTML course.
+This certificate recognizes successful completion
+of the CodeNova HTML Beginner Course.
 </p>
 
 <div class="certificate-name">
-CodeNova Student
+Zaid's Student
 </div>
 
 <p>
@@ -1111,7 +1139,7 @@ CodeNova Student
 </p>
 
 <p style="margin-top:10px">
-✅ 4 Lessons Completed
+✅ 15 Lessons Completed
 </p>
 
 <button class="btn"
@@ -1124,15 +1152,15 @@ onclick="printCertificate()">
 </section>
 
 
-<!-- LESSON -->
+<!-- =========================
+     LESSON PAGE
+========================= -->
 
 <section id="lessonPage" class="page">
 
 <button class="btn back-btn"
 onclick="openHtmlCourse()">
-
 ← Back to Lessons
-
 </button>
 
 <div class="lesson-card">
@@ -1144,9 +1172,7 @@ onclick="openHtmlCourse()">
 <button id="completeBtn"
 class="btn"
 onclick="completeLesson()">
-
 ✅ Complete Lesson
-
 </button>
 
 </div>
@@ -1154,7 +1180,9 @@ onclick="completeLesson()">
 </section>
 
 
-<!-- QUIZ -->
+<!-- =========================
+     QUIZ
+========================= -->
 
 <section id="quiz" class="page">
 
@@ -1180,22 +1208,17 @@ Question 1 / 10
 </div>
 
 <div id="quizQuestion"
-class="quiz-question">
-</div>
+class="quiz-question"></div>
 
-<div id="quizOptions">
-</div>
+<div id="quizOptions"></div>
 
 <p id="quizResult"
-class="quiz-result">
-</p>
+class="quiz-result"></p>
 
 <button id="nextQuizBtn"
 class="btn next-btn"
 onclick="nextQuestion()">
-
 Next Question →
-
 </button>
 
 <div id="quizScore"
@@ -1209,19 +1232,14 @@ class="big-score">
 0 / 10
 </div>
 
-<p id="percentageText">
-0%
-</p>
+<p id="percentageText">0%</p>
 
 <p id="passText"
-style="margin-top:10px">
-</p>
+style="margin-top:10px"></p>
 
 <button class="btn"
 onclick="startQuiz()">
-
 🔄 Retake Quiz
-
 </button>
 
 </div>
@@ -1231,7 +1249,9 @@ onclick="startQuiz()">
 </section>
 
 
-<!-- PROFILE -->
+<!-- =========================
+     PROFILE
+========================= -->
 
 <section id="profile" class="page">
 
@@ -1259,9 +1279,7 @@ Future Developer 🚀
 
 <div class="stat">
 
-<strong id="profileLessons">
-0
-</strong>
+<strong id="profileLessons">0</strong>
 
 <span>Lessons</span>
 
@@ -1269,9 +1287,7 @@ Future Developer 🚀
 
 <div class="stat">
 
-<strong id="profileProgress">
-0%
-</strong>
+<strong id="profileProgress">0%</strong>
 
 <span>Progress</span>
 
@@ -1279,9 +1295,7 @@ Future Developer 🚀
 
 <div class="stat">
 
-<strong id="profileBadges">
-0
-</strong>
+<strong id="profileBadges">0</strong>
 
 <span>Badges</span>
 
@@ -1291,17 +1305,13 @@ Future Developer 🚀
 
 <div class="badge-card">
 
-<div class="badge">
-🏆
-</div>
+<div class="badge">🏆</div>
 
 <h3>Badges</h3>
 
 <p id="badgeText"
 style="color:#94a3b8;margin-top:7px">
-
 Complete lessons and quizzes to unlock badges.
-
 </p>
 
 </div>
@@ -1312,9 +1322,7 @@ Complete lessons and quizzes to unlock badges.
 
 <p id="bestScore"
 style="color:#60a5fa;font-size:25px;margin-top:10px">
-
 0 / 10
-
 </p>
 
 </div>
@@ -1332,12 +1340,69 @@ class="visitor-number">
 
 </div>
 
+
+<!-- CREATOR PROFILE -->
+
+<div class="about-creator">
+
+<div class="creator-avatar">
+🚀
+</div>
+
+<div class="creator-name">
+Zaid Shaikh
+</div>
+
+<div class="creator-role">
+CodeNova Creator
+</div>
+
+<p class="creator-description">
+Hello! I am <strong>Zaid Shaikh</strong>.
+I created CodeNova as a learning project
+for people who want to start coding step by step.
+</p>
+
+<div class="creator-info">
+
+<div class="info-box">
+<strong>🎓 Student</strong>
+<span>12th Standard</span>
+</div>
+
+<div class="info-box">
+<strong>🧑‍💻 Learning</strong>
+<span>Web Development</span>
+</div>
+
+</div>
+
+</div>
+
 </section>
+
+
+<div class="site-footer">
+
+🚀 <strong>CodeNova</strong>
+
+<br>
+
+Created with ❤️ by
+<strong>Zaid Shaikh</strong>
+
+<br><br>
+
+© 2026 CodeNova. All rights reserved.
+
+</div>
 
 </div>
 
 
-<!-- NAV -->
+<!-- =========================
+     BOTTOM NAV
+========================= -->
 
 <nav class="bottom-nav">
 
@@ -1383,18 +1448,14 @@ Profile
 ========================= */
 
 let completedLessons =
-Number(
-localStorage.getItem(
+Number(localStorage.getItem(
 "codeNovaCompletedLessons"
-)
-) || 0;
+)) || 0;
 
 let bestQuizScore =
-Number(
-localStorage.getItem(
+Number(localStorage.getItem(
 "codeNovaBestQuizScore"
-)
-) || 0;
+)) || 0;
 
 let currentLesson = 1;
 let currentQuestion = 0;
@@ -1406,11 +1467,9 @@ let currentScore = 0;
 ========================= */
 
 let visits =
-Number(
-localStorage.getItem(
+Number(localStorage.getItem(
 "codeNovaVisits"
-)
-) || 0;
+)) || 0;
 
 visits++;
 
@@ -1433,9 +1492,7 @@ document.getElementById(
 ========================= */
 
 const particleContainer =
-document.getElementById(
-"particles"
-);
+document.getElementById("particles");
 
 for(let i=0;i<35;i++){
 
@@ -1456,9 +1513,7 @@ Math.random()*8+"s";
 particle.style.opacity =
 Math.random();
 
-particleContainer.appendChild(
-particle
-);
+particleContainer.appendChild(particle);
 
 }
 
@@ -1468,9 +1523,7 @@ particle
 ========================= */
 
 const glow =
-document.getElementById(
-"mouseGlow"
-);
+document.getElementById("mouseGlow");
 
 document.addEventListener(
 "mousemove",
@@ -1487,7 +1540,7 @@ e.clientY+"px";
 
 
 /* =========================
-   LESSONS
+   15 HTML LESSONS
 ========================= */
 
 const lessons = {
@@ -1507,46 +1560,38 @@ of web pages.
 </p>
 
 <div class="code-box">
-
 <code>
 &lt;h1&gt;Hello World&lt;/h1&gt;
 </code>
-
 </div>
 
 <p>
-This creates a main heading
-on a web page.
+This creates a main heading on a web page.
 </p>
-
 `
 },
 
 2:{
-title:"🏷️ Lesson 2 — HTML Tags",
+title:"🏷️ Lesson 2 — HTML Document Structure",
 content:`
 
 <p>
-HTML uses tags to tell the browser
-what each element means.
+Every HTML page normally has a basic document structure.
 </p>
 
 <div class="code-box">
-
 <code>
-
-&lt;h1&gt;Heading&lt;/h1&gt;<br>
-&lt;p&gt;Paragraph&lt;/p&gt;<br>
-&lt;button&gt;Button&lt;/button&gt;
-
+&lt;!DOCTYPE html&gt;<br>
+&lt;html&gt;<br>
+&nbsp;&nbsp;&lt;head&gt;&lt;/head&gt;<br>
+&nbsp;&nbsp;&lt;body&gt;&lt;/body&gt;<br>
+&lt;/html&gt;
 </code>
-
 </div>
 
 <p>
-HTML tags are used to structure content.
+The body contains the content visible on the webpage.
 </p>
-
 `
 },
 
@@ -1555,18 +1600,14 @@ title:"📝 Lesson 3 — Headings & Paragraphs",
 content:`
 
 <p>
-Headings are created using h1 to h6.
+HTML provides headings from h1 to h6.
 </p>
 
 <div class="code-box">
-
 <code>
-
-&lt;h1&gt;My Website&lt;/h1&gt;<br>
-&lt;h2&gt;About Me&lt;/h2&gt;
-
+&lt;h1&gt;Main Heading&lt;/h1&gt;<br>
+&lt;h2&gt;Sub Heading&lt;/h2&gt;
 </code>
-
 </div>
 
 <p>
@@ -1574,51 +1615,287 @@ Paragraphs use the p tag.
 </p>
 
 <div class="code-box">
-
 <code>
-&lt;p&gt;Welcome to my website.&lt;/p&gt;
+&lt;p&gt;Welcome to CodeNova.&lt;/p&gt;
 </code>
-
 </div>
-
 `
 },
 
 4:{
-title:"🔗 Lesson 4 — Links & Images",
+title:"🔗 Lesson 4 — Links",
 content:`
 
 <p>
-The a tag creates links.
+The a tag is used to create hyperlinks.
 </p>
 
 <div class="code-box">
-
 <code>
-
 &lt;a href="https://example.com"&gt;<br>
 Visit Website<br>
 &lt;/a&gt;
-
 </code>
-
 </div>
 
 <p>
-The img tag displays images.
+The href attribute specifies the destination.
+</p>
+`
+},
+
+5:{
+title:"🖼️ Lesson 5 — Images",
+content:`
+
+<p>
+The img tag is used to display an image.
 </p>
 
 <div class="code-box">
-
 <code>
-
 &lt;img src="image.jpg"
 alt="My Image"&gt;
-
 </code>
-
 </div>
 
+<p>
+The src attribute specifies the image location.
+The alt attribute describes the image.
+</p>
+`
+},
+
+6:{
+title:"📋 Lesson 6 — Lists",
+content:`
+
+<p>
+HTML supports ordered and unordered lists.
+</p>
+
+<div class="code-box">
+<code>
+&lt;ul&gt;<br>
+&nbsp;&nbsp;&lt;li&gt;HTML&lt;/li&gt;<br>
+&nbsp;&nbsp;&lt;li&gt;CSS&lt;/li&gt;<br>
+&lt;/ul&gt;
+</code>
+</div>
+
+<p>
+The li tag represents a list item.
+</p>
+`
+},
+
+7:{
+title:"✨ Lesson 7 — Text Formatting",
+content:`
+
+<p>
+HTML has tags for emphasizing and formatting text.
+</p>
+
+<div class="code-box">
+<code>
+&lt;strong&gt;Important&lt;/strong&gt;<br>
+&lt;em&gt;Emphasis&lt;/em&gt;<br>
+&lt;mark&gt;Highlighted&lt;/mark&gt;
+</code>
+</div>
+
+<p>
+These tags can give text different meanings or appearances.
+</p>
+`
+},
+
+8:{
+title:"📊 Lesson 8 — HTML Tables",
+content:`
+
+<p>
+Tables are used to organize information into rows and columns.
+</p>
+
+<div class="code-box">
+<code>
+&lt;table&gt;<br>
+&nbsp;&nbsp;&lt;tr&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Name&lt;/th&gt;<br>
+&nbsp;&nbsp;&lt;/tr&gt;<br>
+&nbsp;&nbsp;&lt;tr&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Zaid&lt;/td&gt;<br>
+&nbsp;&nbsp;&lt;/tr&gt;<br>
+&lt;/table&gt;
+</code>
+</div>
+`
+},
+
+9:{
+title:"📝 Lesson 9 — HTML Forms",
+content:`
+
+<p>
+Forms collect information from users.
+</p>
+
+<div class="code-box">
+<code>
+&lt;form&gt;<br>
+&nbsp;&nbsp;&lt;input type="text"
+placeholder="Your Name"&gt;<br>
+&nbsp;&nbsp;&lt;button&gt;Submit&lt;/button&gt;<br>
+&lt;/form&gt;
+</code>
+</div>
+
+<p>
+Forms are commonly used for login, registration and contact pages.
+</p>
+`
+},
+
+10:{
+title:"🏗️ Lesson 10 — Semantic HTML",
+content:`
+
+<p>
+Semantic tags describe the purpose of different parts of a webpage.
+</p>
+
+<div class="code-box">
+<code>
+&lt;header&gt;Header&lt;/header&gt;<br>
+&lt;nav&gt;Navigation&lt;/nav&gt;<br>
+&lt;main&gt;Main Content&lt;/main&gt;<br>
+&lt;section&gt;Section&lt;/section&gt;<br>
+&lt;footer&gt;Footer&lt;/footer&gt;
+</code>
+</div>
+`
+},
+
+11:{
+title:"⚙️ Lesson 11 — HTML Attributes",
+content:`
+
+<p>
+Attributes provide additional information about HTML elements.
+</p>
+
+<div class="code-box">
+<code>
+&lt;a href="page.html"
+class="link"&gt;Open&lt;/a&gt;
+</code>
+</div>
+
+<p>
+Common attributes include id, class, href, src and alt.
+</p>
+`
+},
+
+12:{
+title:"💬 Lesson 12 — HTML Comments",
+content:`
+
+<p>
+Comments help developers explain their code.
+</p>
+
+<div class="code-box">
+<code>
+&lt;!-- This is an HTML comment --&gt;
+</code>
+</div>
+
+<p>
+Comments are not displayed as normal webpage content.
+</p>
+`
+},
+
+13:{
+title:"🎵 Lesson 13 — Audio & Video",
+content:`
+
+<p>
+HTML can display audio and video content.
+</p>
+
+<div class="code-box">
+<code>
+&lt;audio controls&gt;<br>
+&nbsp;&nbsp;&lt;source src="audio.mp3"&gt;<br>
+&lt;/audio&gt;
+</code>
+</div>
+
+<div class="code-box">
+<code>
+&lt;video controls&gt;<br>
+&nbsp;&nbsp;&lt;source src="video.mp4"&gt;<br>
+&lt;/video&gt;
+</code>
+</div>
+`
+},
+
+14:{
+title:"🚀 Lesson 14 — HTML5",
+content:`
+
+<p>
+HTML5 introduced many modern features and semantic elements.
+</p>
+
+<div class="code-box">
+<code>
+&lt;header&gt;<br>
+&lt;main&gt;<br>
+&lt;section&gt;<br>
+&lt;article&gt;<br>
+&lt;footer&gt;
+</code>
+</div>
+
+<p>
+HTML5 makes it easier to structure modern websites.
+</p>
+`
+},
+
+15:{
+title:"🏆 Lesson 15 — Mini HTML Project",
+content:`
+
+<p>
+Now let's combine the basics into a simple webpage.
+</p>
+
+<div class="code-box">
+<code>
+&lt;!DOCTYPE html&gt;<br>
+&lt;html&gt;<br>
+&lt;head&gt;<br>
+&nbsp;&nbsp;&lt;title&gt;My Website&lt;/title&gt;<br>
+&lt;/head&gt;<br>
+&lt;body&gt;<br>
+&nbsp;&nbsp;&lt;h1&gt;Hello World&lt;/h1&gt;<br>
+&nbsp;&nbsp;&lt;p&gt;I am learning HTML.&lt;/p&gt;<br>
+&nbsp;&nbsp;&lt;a href="#"&gt;My Link&lt;/a&gt;<br>
+&lt;/body&gt;<br>
+&lt;/html&gt;
+</code>
+</div>
+
+<p>
+🎉 Congratulations! You have completed the HTML beginner course.
+</p>
 `
 }
 
@@ -1626,122 +1903,79 @@ alt="My Image"&gt;
 
 
 /* =========================
-   QUIZ QUESTIONS
+   CREATE LESSON LIST
 ========================= */
 
-const quizQuestions=[
+function createLessonList(){
 
-{
-question:"What does HTML stand for?",
-options:[
-"Hyper Trainer Marking Language",
-"HyperText Markup Language",
-"HighText Machine Language",
-"Hyper Tool Multi Language"
-],
-answer:1
-},
+const list =
+document.getElementById("lessonList");
 
-{
-question:"Which tag is used for the largest heading?",
-options:[
-"<heading>",
-"<h6>",
-"<h1>",
-"<head>"
-],
-answer:2
-},
+list.innerHTML="";
 
-{
-question:"Which tag is used to create a paragraph?",
-options:[
-"<p>",
-"<paragraph>",
-"<text>",
-"<para>"
-],
-answer:0
-},
+Object.keys(lessons).forEach(number=>{
 
-{
-question:"Which tag is used to create a link?",
-options:[
-"<link>",
-"<a>",
-"<url>",
-"<href>"
-],
-answer:1
-},
+const item =
+document.createElement("div");
 
-{
-question:"Which attribute specifies an image source?",
-options:[
-"href",
-"link",
-"src",
-"source"
-],
-answer:2
-},
+item.className="lesson-item";
 
-{
-question:"Which tag is used to display an image?",
-options:[
-"<picture>",
-"<image>",
-"<img>",
-"<src>"
-],
-answer:2
-},
+item.id="lesson"+number+"Item";
 
-{
-question:"Which tag creates an unordered list?",
-options:[
-"<ol>",
-"<ul>",
-"<list>",
-"<li>"
-],
-answer:1
-},
+item.onclick=function(){
+openLesson(Number(number));
+};
 
-{
-question:"Which tag represents a list item?",
-options:[
-"<item>",
-"<list>",
-"<li>",
-"<ul>"
-],
-answer:2
-},
+item.innerHTML=`
 
-{
-question:"Which HTML tag creates a button?",
-options:[
-"<button>",
-"<btn>",
-"<click>",
-"<inputbutton>"
-],
-answer:0
-},
+<h3>${lessons[number].title}</h3>
 
-{
-question:"Which declaration defines an HTML5 document?",
-options:[
-"<html5>",
-"<doctype html>",
-"<!DOCTYPE html>",
-"<document>"
-],
-answer:2
+<p>
+${getLessonDescription(Number(number))}
+</p>
+
+<div class="lesson-status">
+✅ Completed
+</div>
+
+`;
+
+list.appendChild(item);
+
+});
+
 }
 
-];
+
+/* =========================
+   LESSON DESCRIPTIONS
+========================= */
+
+function getLessonDescription(number){
+
+const descriptions={
+
+1:"Learn the basics of HTML.",
+2:"Understand the structure of an HTML document.",
+3:"Learn headings and paragraphs.",
+4:"Create links between webpages.",
+5:"Learn how to add images.",
+6:"Create ordered and unordered lists.",
+7:"Format and emphasize text.",
+8:"Create tables with rows and columns.",
+9:"Build basic HTML forms.",
+10:"Understand semantic HTML elements.",
+11:"Learn common HTML attributes.",
+12:"Understand HTML comments.",
+13:"Add audio and video to webpages.",
+14:"Explore modern HTML5 elements.",
+15:"Build a simple HTML webpage."
+
+};
+
+return descriptions[number];
+
+}
 
 
 /* =========================
@@ -1750,9 +1984,8 @@ answer:2
 
 function showPage(pageId,button){
 
-document.querySelectorAll(
-".page"
-).forEach(page=>{
+document.querySelectorAll(".page")
+.forEach(page=>{
 page.classList.remove("active");
 });
 
@@ -1763,9 +1996,8 @@ if(!page)return;
 
 page.classList.add("active");
 
-document.querySelectorAll(
-".nav-btn"
-).forEach(btn=>{
+document.querySelectorAll(".nav-btn")
+.forEach(btn=>{
 btn.classList.remove("active");
 });
 
@@ -1812,44 +2044,35 @@ function openLesson(number){
 
 currentLesson=number;
 
-const lesson =
-lessons[number];
+const lesson=lessons[number];
 
 document.getElementById(
 "lessonTitle"
-).innerHTML =
-lesson.title;
+).innerHTML=lesson.title;
 
 document.getElementById(
 "lessonContent"
-).innerHTML =
-lesson.content;
+).innerHTML=lesson.content;
 
-const completeBtn =
-document.getElementById(
-"completeBtn"
-);
+const completeBtn=
+document.getElementById("completeBtn");
 
-const item =
+const item=
 document.getElementById(
 "lesson"+number+"Item"
 );
 
-if(
-item &&
-item.classList.contains(
-"completed"
-)
-){
+if(item &&
+item.classList.contains("completed")){
 
-completeBtn.textContent =
+completeBtn.textContent=
 "✅ Lesson Completed";
 
 completeBtn.disabled=true;
 
 }else{
 
-completeBtn.textContent =
+completeBtn.textContent=
 "✅ Complete Lesson";
 
 completeBtn.disabled=false;
@@ -1867,26 +2090,20 @@ showPage("lessonPage");
 
 function completeLesson(){
 
-const item =
+const item=
 document.getElementById(
 "lesson"+currentLesson+"Item"
 );
 
-if(
-item &&
-!item.classList.contains(
-"completed"
-)
-){
+if(item &&
+!item.classList.contains("completed")){
 
-item.classList.add(
-"completed"
-);
+item.classList.add("completed");
 
 completedLessons++;
 
-if(completedLessons>4){
-completedLessons=4;
+if(completedLessons>15){
+completedLessons=15;
 }
 
 localStorage.setItem(
@@ -1896,19 +2113,15 @@ completedLessons
 
 }
 
-const btn =
-document.getElementById(
-"completeBtn"
-);
+const btn=
+document.getElementById("completeBtn");
 
-btn.textContent =
+btn.textContent=
 "✅ Lesson Completed";
 
 btn.disabled=true;
 
 updateProgress();
-
-checkCertificate();
 
 }
 
@@ -1919,54 +2132,48 @@ checkCertificate();
 
 function updateProgress(){
 
-const percentage =
+const percentage=
 Math.round(
-(completedLessons/4)*100
+(completedLessons/15)*100
 );
 
-const htmlProgress =
-document.getElementById(
-"htmlProgress"
-);
+const htmlProgress=
+document.getElementById("htmlProgress");
 
-const homeProgress =
-document.getElementById(
-"homeProgress"
-);
+const homeProgress=
+document.getElementById("homeProgress");
 
 if(htmlProgress){
-htmlProgress.style.width =
+htmlProgress.style.width=
 percentage+"%";
 }
 
 if(homeProgress){
-homeProgress.style.width =
+homeProgress.style.width=
 percentage+"%";
 }
 
-const htmlText =
-document.getElementById(
-"htmlProgressText"
-);
+const htmlText=
+document.getElementById("htmlProgressText");
 
-const homeText =
-document.getElementById(
-"homeProgressText"
-);
+const homeText=
+document.getElementById("homeProgressText");
 
 if(htmlText){
-htmlText.textContent =
+htmlText.textContent=
 completedLessons+
-" / 4 lessons completed";
+" / 15 lessons completed";
 }
 
 if(homeText){
-homeText.textContent =
+homeText.textContent=
 percentage+
 "% completed";
 }
 
 updateProfile();
+
+checkCertificate();
 
 }
 
@@ -1977,31 +2184,146 @@ updateProfile();
 
 function loadSavedProgress(){
 
-for(let i=1;i<=4;i++){
+Object.keys(lessons).forEach(number=>{
 
-const item =
+const item=
 document.getElementById(
-"lesson"+i+"Item"
+"lesson"+number+"Item"
 );
 
 if(
-i<=completedLessons &&
+Number(number)<=completedLessons &&
 item
 ){
 
-item.classList.add(
-"completed"
-);
+item.classList.add("completed");
 
 }
 
-}
+});
 
 updateProgress();
 
-checkCertificate();
-
 }
+
+
+/* =========================
+   QUIZ QUESTIONS
+========================= */
+
+const quizQuestions=[
+
+{
+question:"What does HTML stand for?",
+options:[
+"Hyper Trainer Marking Language",
+"HyperText Markup Language",
+"HighText Machine Language",
+"Hyper Tool Multi Language"
+],
+answer:1
+},
+
+{
+question:"Which tag is used for the largest heading?",
+options:[
+"<heading>",
+"<h6>",
+"<h1>",
+"<head>"
+],
+answer:2
+},
+
+{
+question:"Which tag creates a paragraph?",
+options:[
+"<p>",
+"<paragraph>",
+"<text>",
+"<para>"
+],
+answer:0
+},
+
+{
+question:"Which tag creates a link?",
+options:[
+"<link>",
+"<a>",
+"<url>",
+"<href>"
+],
+answer:1
+},
+
+{
+question:"Which attribute specifies an image source?",
+options:[
+"href",
+"link",
+"src",
+"source"
+],
+answer:2
+},
+
+{
+question:"Which tag displays an image?",
+options:[
+"<picture>",
+"<image>",
+"<img>",
+"<src>"
+],
+answer:2
+},
+
+{
+question:"Which tag creates an unordered list?",
+options:[
+"<ol>",
+"<ul>",
+"<list>",
+"<li>"
+],
+answer:1
+},
+
+{
+question:"Which tag represents a list item?",
+options:[
+"<item>",
+"<list>",
+"<li>",
+"<ul>"
+],
+answer:2
+},
+
+{
+question:"Which tag creates a button?",
+options:[
+"<button>",
+"<btn>",
+"<click>",
+"<inputbutton>"
+],
+answer:0
+},
+
+{
+question:"Which declaration defines an HTML5 document?",
+options:[
+"<html5>",
+"<doctype html>",
+"<!DOCTYPE html>",
+"<document>"
+],
+answer:2
+}
+
+];
 
 
 /* =========================
@@ -2036,14 +2358,14 @@ showQuestion();
 
 function showQuestion(){
 
-const question =
+const question=
 quizQuestions[currentQuestion];
 
 if(!question)return;
 
 document.getElementById(
 "quizCounter"
-).textContent =
+).textContent=
 "Question "+
 (currentQuestion+1)+
 " / "+
@@ -2051,49 +2373,33 @@ quizQuestions.length;
 
 document.getElementById(
 "quizQuestion"
-).textContent =
+).textContent=
 question.question;
 
-const container =
-document.getElementById(
-"quizOptions"
-);
+const container=
+document.getElementById("quizOptions");
 
 container.innerHTML="";
 
 question.options.forEach(
 (option,index)=>{
 
-const button =
-document.createElement(
-"button"
-);
+const button=
+document.createElement("button");
 
 button.className="option";
 
-button.textContent =
-String.fromCharCode(
-65+index
-)+". "+option;
+button.textContent=
+String.fromCharCode(65+index)+
+". "+option;
 
-button.addEventListener(
-"click",
-function(){
+button.onclick=function(){
+selectAnswer(button,index);
+};
 
-selectAnswer(
-button,
-index
-);
+container.appendChild(button);
 
-}
-);
-
-container.appendChild(
-button
-);
-
-}
-);
+});
 
 document.getElementById(
 "quizResult"
@@ -2115,70 +2421,51 @@ button,
 selectedIndex
 ){
 
-const question =
+const question=
 quizQuestions[currentQuestion];
 
-const options =
+const options=
 document.querySelectorAll(
 "#quizOptions .option"
 );
 
-options.forEach(
-option=>{
+options.forEach(option=>{
 option.disabled=true;
-}
-);
+});
 
-if(
-selectedIndex ===
-question.answer
-){
+if(selectedIndex===question.answer){
 
-button.classList.add(
-"correct"
-);
+button.classList.add("correct");
 
 currentScore++;
 
 document.getElementById(
 "quizResult"
-).textContent =
+).textContent=
 "🎉 Correct!";
 
 }else{
 
-button.classList.add(
-"wrong"
-);
+button.classList.add("wrong");
 
-if(
+if(options[question.answer]){
 options[question.answer]
-){
-
-options[
-question.answer
-].classList.add(
-"correct"
-);
-
+.classList.add("correct");
 }
 
 document.getElementById(
 "quizResult"
-).textContent =
+).textContent=
 "❌ Wrong answer.";
 
 }
 
-if(
-currentQuestion <
-quizQuestions.length-1
-){
+if(currentQuestion<
+quizQuestions.length-1){
 
 document.getElementById(
 "nextQuizBtn"
-).style.display =
-"block";
+).style.display="block";
 
 }else{
 
@@ -2208,21 +2495,17 @@ showQuestion();
 
 function finishQuiz(){
 
-const total =
+const total=
 quizQuestions.length;
 
-const percentage =
+const percentage=
 Math.round(
 (currentScore/total)*100
 );
 
-if(
-currentScore >
-bestQuizScore
-){
+if(currentScore>bestQuizScore){
 
-bestQuizScore =
-currentScore;
+bestQuizScore=currentScore;
 
 localStorage.setItem(
 "codeNovaBestQuizScore",
@@ -2233,43 +2516,37 @@ bestQuizScore
 
 document.getElementById(
 "quizScore"
-).style.display =
-"block";
+).style.display="block";
 
 document.getElementById(
 "bigScore"
-).textContent =
+).textContent=
 currentScore+
 " / "+
 total;
 
 document.getElementById(
 "percentageText"
-).textContent =
-percentage+
-"%";
+).textContent=
+percentage+"%";
 
-const passText =
-document.getElementById(
-"passText"
-);
+const passText=
+document.getElementById("passText");
 
-if(
-percentage>=70
-){
+if(percentage>=70){
 
-passText.textContent =
+passText.textContent=
 "🏆 Excellent! You passed the quiz.";
 
-passText.className =
+passText.className=
 "pass-text";
 
 }else{
 
-passText.textContent =
+passText.textContent=
 "📚 Keep learning and try again.";
 
-passText.className =
+passText.className=
 "fail-text";
 
 }
@@ -2285,50 +2562,49 @@ updateProfile();
 
 function updateProfile(){
 
-const percentage =
+const percentage=
 Math.round(
-(completedLessons/4)*100
+(completedLessons/15)*100
 );
 
-const profileLessons =
+const profileLessons=
 document.getElementById(
 "profileLessons"
 );
 
-const profileProgress =
+const profileProgress=
 document.getElementById(
 "profileProgress"
 );
 
-const profileBadges =
+const profileBadges=
 document.getElementById(
 "profileBadges"
 );
 
-const bestScore =
+const bestScore=
 document.getElementById(
 "bestScore"
 );
 
-const badgeText =
+const badgeText=
 document.getElementById(
 "badgeText"
 );
 
 if(profileLessons){
-profileLessons.textContent =
+profileLessons.textContent=
 completedLessons;
 }
 
 if(profileProgress){
-profileProgress.textContent =
+profileProgress.textContent=
 percentage+"%";
 }
 
 if(bestScore){
-bestScore.textContent =
-bestQuizScore+
-" / 10";
+bestScore.textContent=
+bestQuizScore+" / 10";
 }
 
 let badges=0;
@@ -2337,7 +2613,7 @@ if(completedLessons>=1){
 badges++;
 }
 
-if(completedLessons>=4){
+if(completedLessons>=15){
 badges++;
 }
 
@@ -2346,30 +2622,29 @@ badges++;
 }
 
 if(profileBadges){
-profileBadges.textContent =
-badges;
+profileBadges.textContent=badges;
 }
 
 if(badgeText){
 
 if(badges===0){
 
-badgeText.textContent =
+badgeText.textContent=
 "Complete lessons and quizzes to unlock badges.";
 
 }else if(badges===1){
 
-badgeText.textContent =
+badgeText.textContent=
 "🌱 First Step — You started learning!";
 
 }else if(badges===2){
 
-badgeText.textContent =
+badgeText.textContent=
 "🔥 HTML Learner — Course completed!";
 
 }else{
 
-badgeText.textContent =
+badgeText.textContent=
 "🏆 Coding Champion — Quiz passed!";
 
 }
@@ -2387,27 +2662,21 @@ checkCertificate();
 
 function checkCertificate(){
 
-const certificate =
-document.getElementById(
-"certificate"
-);
+const certificate=
+document.getElementById("certificate");
 
 if(!certificate)return;
 
 if(
-completedLessons>=4 &&
+completedLessons>=15 &&
 bestQuizScore>=7
 ){
 
-certificate.classList.add(
-"show"
-);
+certificate.classList.add("show");
 
 }else{
 
-certificate.classList.remove(
-"show"
-);
+certificate.classList.remove("show");
 
 }
 
@@ -2421,12 +2690,12 @@ certificate.classList.remove(
 function printCertificate(){
 
 if(
-completedLessons<4 ||
+completedLessons<15 ||
 bestQuizScore<7
 ){
 
 alert(
-"Complete all 4 lessons and score at least 70% in the quiz first."
+"Complete all 15 lessons and score at least 70% in the quiz first."
 );
 
 return;
@@ -2441,6 +2710,8 @@ window.print();
 /* =========================
    INITIALIZE
 ========================= */
+
+createLessonList();
 
 loadSavedProgress();
 
